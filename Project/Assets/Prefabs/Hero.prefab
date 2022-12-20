@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6031200009518640382}
   - component: {fileID: 6031200009518640377}
   - component: {fileID: 6031200009518640376}
+  - component: {fileID: 5739375751545410619}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Untagged
@@ -81,6 +82,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &5739375751545410619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6031200009518640379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae04d20664b6d2d4fb20fd0730d6b6e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  hp: 5
+  jumpforce: 10
 --- !u!1 &6031200010301109512
 GameObject:
   m_ObjectHideFlags: 0
