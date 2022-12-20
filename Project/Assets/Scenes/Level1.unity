@@ -1909,6 +1909,7 @@ GameObject:
   - component: {fileID: 1071960444}
   - component: {fileID: 1071960443}
   - component: {fileID: 1071960442}
+  - component: {fileID: 1071960445}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Untagged
@@ -1979,6 +1980,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1071960445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071960441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae04d20664b6d2d4fb20fd0730d6b6e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.01
+  hp: 5
+  jumpforce: 6.5
 --- !u!1 &1085195029
 GameObject:
   m_ObjectHideFlags: 0
