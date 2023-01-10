@@ -5,10 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class Enemy: MonoBehaviour
 {
+    private Animator anim;
+    private SpriteRenderer sprite;
+
     public float speed;
     public Vector3[] position;
 
     private int currentTarget;
+
+    private States State
+    {
+        get { return (States)anim.GetInteger("state"); }
+        set { anim.SetInteger("state", (int)value); }
+    }
 
     public void FixedUpdate()
     {
@@ -41,4 +50,23 @@ public class Enemy: MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void Awake()
+    {
+        sprite = GetComponentInChildren<SpriteRenderer>();
+        anim = GetComponent<Animator>();
+    }
+
+    private void EnemyWolk()
+    {
+        Vector3 dir = transform.right * Input.GetAxis("Horizontal");
+        transform.position = Vector3.MoveTowards(transform.position, transform.position + dir, speed + Time.deltaTime);
+        sprite.flipX = dir.x < 0.0f;
+    }
+}
+
+public enum States1
+{
+    EnemyIdle,
+    EnemyWolk
 }
